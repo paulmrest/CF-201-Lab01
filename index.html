@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All of Time</title>
+  <style>
+    h1 {
+      text-transform: capitalize;
+      background-color: goldenrod;
+    }
+  </style>
+  <script>
+    var stelliferousAnswer = prompt('Enjoying the Stelliferous Era?').toLowerCase();
+    ///TESTING
+    console.log('User enjoying the Stelliferous Era? ' + stelliferousAnswer);
+    ///
+    if (stelliferousAnswer === 'y' || stelliferousAnswer === 'yes' || stelliferousAnswer == 'yeah')
+    {
+      alert('Better buy some nightlights then. The dark is coming.');
+    }
+    var validNumericalAge = false;
+    var currUniverseAge;
+    while (!validNumericalAge)
+    {
+      currUniverseAge = prompt('What is the current age of the universe?');
+      ///TESTING
+      console.log('User\'s inputted universe age: ' + currUniverseAge);
+      ///
+      if (!isNaN(parseFloat(currUniverseAge)) && isFinite(currUniverseAge))
+      {
+        validNumericalAge = true;
+      }
+      else
+      {
+        alert('Age must be numerical.');
+      }
+    }
+    var yearsToEndOfStelliferousAge = 100000000000000 - currUniverseAge;
+    if (yearsToEndOfStelliferousAge > 0)
+    {
+      alert('You have ' + yearsToEndOfStelliferousAge + ' years of starlight left.');
+    }
+    else
+    {
+      var blackDwarfName = prompt('You are already past the Stelliferious Age. What would you like to name your closest black dwarf?');
+      ///TESTING
+      console.log('User already past Stelliferious Age, user\'s black dwarf name ' + blackDwarfName);
+      ///
+  
+      alert('Wave at ' + blackDwarfName + ' your friendly neighborhood black dwarf!');
+    }
+  
+    var lastBlackHole = prompt('What should we name the last black hole in the universe?');
+    ///TESTING
+    console.log('User\'s name for the last black hole ' + lastBlackHole);
+    ///
+  
+    alert('Hawking Radiation will take ' + lastBlackHole + ' from you as well.');
+  </script>  
+</head>
+<body>
+  <header>
+    <h1>Class 1 Lab</h1>
+    <h2>A Brief Look at the Edge</h2>
+    <img src="./Images/cosmic-dark-era.jpg" alt="Universe Dark Era">
+  </header>
+  <main>
+    <p style="color:violet;">Enjoying the Stelliferous Era?</p>
+    <p style="color:orangered;">What is the current age of the universe?</p>
+    <p style="color:lime;">You are already past the Stelliferious Age. What would you like to name your closest black dwarf?</p>
+    <p style="color:blueviolet;">What should we name the last black hole in the universe?</p>
+  </main>
+  <footer></footer>
+</body>
+</html>
